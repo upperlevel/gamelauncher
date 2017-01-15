@@ -1,0 +1,39 @@
+# here's the list of all files to extract from this jar:
+
+# the root resources path
+path: '$user/.upperlevel/gamelauncher/'
+
+resources:
+  # LAUNCHER GUI
+
+  # launcher_gui.fxml
+  - id: 'launcher_gui_fxml'
+    where: 'resources/gui/launcher_gui.fxml'
+    at: 'resources/gui/launcher_gui.fxml'
+
+  # launcher_gui.css
+  - id: 'launcher_gui_css'
+    where: 'resources/gui/launcher_gui.css'
+    at: 'resources/gui/launcher_gui.css'
+
+  # MAIN PRESENTATION
+
+  # presentations/main/index.html
+  - id: 'main_presentation'
+    where: 'resources/gui/presentations/main/index.html'
+    at: 'resources/gui/presentations/main/index.html'
+
+  # presentations/main/background_pattern.png
+  - where: 'resources/gui/presentations/main/background_pattern.png'
+    at: 'resources/gui/presentations/main/background_pattern.png'
+
+  # GAME PRESENTATION
+
+  # presentations/game/index.html
+  - id: 'game_presentation'
+    where: 'resources/gui/presentations/game/index.html'
+    at: 'resources/gui/presentations/game/index.html'
+
+  # presentations/game/README.txt
+  - where: 'resources/gui/presentations/game/README.txt'
+    at: 'resources/gui/presentations/game/README.txt'

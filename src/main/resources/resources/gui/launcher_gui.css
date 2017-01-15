@@ -1,0 +1,80 @@
+* {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+
+Button {
+    -fx-padding: 0;
+}
+
+/* presentation tab */
+
+#presentationTab .tab {
+    -fx-background-color: linear-gradient(#9b2626, #721b1b);
+    -fx-border-color: #721b1b;
+}
+
+#presentationTab .tab-label {
+    -fx-text-fill: white;
+}
+
+#presentationTab .tab:hover {
+    -fx-background-color: #9b2626;
+}
+
+#presentationTab .tab:pressed {
+    -fx-background-color: #721b1b;
+}
+
+/* menu */
+
+MenuBar {
+    -fx-background-color: linear-gradient(#8D6E63, #6D4C41);
+    -fx-border-color: #4E342E;
+}
+
+.menu-bar .label {
+    -fx-text-fill: white;
+}
+
+.tab-pane .tab-header-background {
+    -fx-border-color: transparent transparent #721b1b transparent;
+}
+
+.menu-item .label {
+    -fx-text-fill: white;
+}
+
+.menu-item:focused {
+    -fx-background-color: #8D6E63;
+}
+
+.context-menu {
+    -fx-background-color: #6D4C41;
+    -fx-border-color: transparent #4E342E #4E342E #4E342E;
+}
+
+/* low box */
+
+#lowBox {
+    -fx-background-color: linear-gradient(#8D6E63, #6D4C41);
+    -fx-border-color: #4E342E;
+}
+
+/* start button */
+
+#startButton:hover {
+    -fx-background-color: #9b2626;
+}
+
+#startButton:pressed {
+    -fx-background-color: #721b1b;
+}
+
+#startButton {
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(#9b2626, #721b1b);
+    -fx-border-color: #721b1b;
+}
