@@ -11,9 +11,8 @@ import javafx.scene.web.WebView;
 import javafx.stage.FileChooser;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import xyz.upperlevel.gamelauncher.GameLauncherExtractor;
-import xyz.upperlevel.gamelauncher.api.LauncherControlPanel;
 import xyz.upperlevel.gamelauncher.api.Game;
+import xyz.upperlevel.gamelauncher.api.LauncherControlPanel;
 
 import java.io.File;
 import java.net.URL;
@@ -78,7 +77,7 @@ public class GameLauncherMainGUIController implements Initializable {
     }
 
     private void updateStartButton(Tab currentTab) {
-        //startButton.setDisable(presentationTab == currentTab);
+        startButton.setDisable(presentationTab == currentTab);
     }
 
     @Override

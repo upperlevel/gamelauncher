@@ -5,12 +5,10 @@ import javafx.scene.control.TabPane;
 import javafx.scene.web.WebView;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import xyz.upperlevel.gamelauncher.GameLauncherExtractor;
-import xyz.upperlevel.gamelauncher.api.LauncherControlPanel;
 import xyz.upperlevel.gamelauncher.api.Game;
+import xyz.upperlevel.gamelauncher.api.LauncherControlPanel;
 
 import java.io.File;
-import java.io.InputStream;
 import java.net.URL;
 import java.util.Collection;
 import java.util.HashMap;
