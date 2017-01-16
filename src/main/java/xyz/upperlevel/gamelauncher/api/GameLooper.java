@@ -1,4 +1,4 @@
-package xyz.upperlevel.graphicengine.gamelauncher.api;
+package xyz.upperlevel.gamelauncher.api;
 
 import lombok.Getter;
 import xyz.upperlevel.graphicengine.api.window.GLFW;
@@ -12,7 +12,7 @@ public class GameLooper {
     @Getter
     public final Window window;
 
-    private Window newWindow() {
+    private Window createWindow() {
         Window window = GLFW.createWindow(750, 500, "Initializing window...");
         window.centerPosition();
         return window;
@@ -21,7 +21,7 @@ public class GameLooper {
     public GameLooper(Game game) {
         this.game = game;
         game.looper = this;
-        window = newWindow();
+        window = createWindow();
     }
 
     /**

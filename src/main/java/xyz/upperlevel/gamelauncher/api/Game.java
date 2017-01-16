@@ -1,4 +1,4 @@
-package xyz.upperlevel.graphicengine.gamelauncher.api;
+package xyz.upperlevel.gamelauncher.api;
 
 import lombok.*;
 

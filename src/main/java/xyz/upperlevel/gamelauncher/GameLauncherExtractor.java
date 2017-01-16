@@ -1,7 +1,7 @@
-package xyz.upperlevel.graphicengine.gamelauncher;
+package xyz.upperlevel.gamelauncher;
 
 import lombok.Getter;
-import xyz.upperlevel.graphicengine.gamelauncher.util.Extractor;
+import xyz.upperlevel.gamelauncher.util.Extractor;
 
 import java.io.File;
 import java.io.IOException;

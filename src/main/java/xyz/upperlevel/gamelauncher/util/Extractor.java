@@ -1,4 +1,4 @@
-package xyz.upperlevel.graphicengine.gamelauncher.util;
+package xyz.upperlevel.gamelauncher.util;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

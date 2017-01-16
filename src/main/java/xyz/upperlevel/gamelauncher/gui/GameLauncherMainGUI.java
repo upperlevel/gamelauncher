@@ -1,4 +1,4 @@
-package xyz.upperlevel.graphicengine.gamelauncher.gui;
+package xyz.upperlevel.gamelauncher.gui;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import lombok.Getter;
-import xyz.upperlevel.graphicengine.gamelauncher.GameLauncherExtractor;
+import xyz.upperlevel.gamelauncher.GameLauncherExtractor;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -34,7 +34,8 @@ public class GameLauncherMainGUI extends Application {
         }
         FXMLLoader loader = new FXMLLoader();
         loader.setController(new GameLauncherMainGUIController(this));
-        Parent root = loader.load(new FileInputStream(GameLauncherExtractor.$().getLauncherGuiFXML()));
+        Parent root = loader.load(getClass().getClassLoader().getResourceAsStream("resources/gui/launcher_gui.fxml"));
+        root.getStylesheets().add("resources/gui/launcher_gui.css");
 
         Scene scene = new Scene(root);
         stage.setScene(scene);

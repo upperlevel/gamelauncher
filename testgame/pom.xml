@@ -14,6 +14,14 @@
     <artifactId>testgame</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <dependencies>
+        <dependency>
+            <groupId>xyz.upperlevel.gamelauncher</groupId>
+            <artifactId>gamelauncher</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>

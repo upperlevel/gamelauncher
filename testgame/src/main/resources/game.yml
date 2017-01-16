@@ -1,0 +1,6 @@
+groupId: xyz.upperlevel
+id: testgame
+version: 1.0.0-SNAPSHOT
+displayName: Test Game
+
+main: xyz.upperlevel.graphicengine.testgame.TestGame

@@ -1,6 +1,6 @@
 package xyz.upperlevel.graphicengine.testgame;
 
-import xyz.upperlevel.graphicengine.gamelauncher.api.Game;
+import xyz.upperlevel.gamelauncher.api.Game;
 
 public class TestGame extends Game {
     @Override

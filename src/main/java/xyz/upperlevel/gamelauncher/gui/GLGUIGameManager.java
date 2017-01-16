@@ -1,14 +1,17 @@
-package xyz.upperlevel.graphicengine.gamelauncher.gui;
+package xyz.upperlevel.gamelauncher.gui;
 
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.web.WebView;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import xyz.upperlevel.graphicengine.gamelauncher.api.LauncherControlPanel;
-import xyz.upperlevel.graphicengine.gamelauncher.api.Game;
+import xyz.upperlevel.gamelauncher.GameLauncherExtractor;
+import xyz.upperlevel.gamelauncher.api.LauncherControlPanel;
+import xyz.upperlevel.gamelauncher.api.Game;
 
 import java.io.File;
+import java.io.InputStream;
+import java.net.URL;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -17,7 +20,8 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class GLGUIGameManager {
 
-    @Getter public final TabPane pane;
+    @Getter
+    public final TabPane pane;
     private final Map<Tab, Game> games = new HashMap<>();
 
     public void setup(Game game) {
@@ -25,7 +29,13 @@ public class GLGUIGameManager {
         tab.setText(game.getIdentity().getId());
         {
             WebView view = new WebView();
-            view.getEngine().load(game.getClassLoader().getResource("presentation/index.html").toExternalForm());
+            String url;
+            {
+                URL pres = game.getClassLoader().getResource("presentation/index.html");
+                url = pres != null ? pres.toExternalForm() : getClass().getClassLoader().getResource("resources/gui/presentations/game/index.html").toExternalForm();
+                System.out.println("Loading presentation from: " + url);
+            }
+            view.getEngine().load(url);
             tab.setContent(view);
         }
         pane.getTabs().add(tab);

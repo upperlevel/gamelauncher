@@ -1,4 +1,4 @@
-package xyz.upperlevel.graphicengine.gamelauncher.util;
+package xyz.upperlevel.gamelauncher.util;
 
 import org.apache.commons.io.FileUtils;
 

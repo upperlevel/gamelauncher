@@ -1,4 +1,4 @@
-package xyz.upperlevel.graphicengine.gamelauncher.gui;
+package xyz.upperlevel.gamelauncher.gui;
 
 import javafx.beans.property.ReadOnlyObjectProperty;
 import javafx.fxml.FXML;
@@ -11,9 +11,9 @@ import javafx.scene.web.WebView;
 import javafx.stage.FileChooser;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import xyz.upperlevel.graphicengine.gamelauncher.GameLauncherExtractor;
-import xyz.upperlevel.graphicengine.gamelauncher.api.LauncherControlPanel;
-import xyz.upperlevel.graphicengine.gamelauncher.api.Game;
+import xyz.upperlevel.gamelauncher.GameLauncherExtractor;
+import xyz.upperlevel.gamelauncher.api.LauncherControlPanel;
+import xyz.upperlevel.gamelauncher.api.Game;
 
 import java.io.File;
 import java.net.URL;
@@ -50,6 +50,8 @@ public class GameLauncherMainGUIController implements Initializable {
         try {
             gameManager.load(result);
         } catch (Exception e) {
+            e.printStackTrace();
+
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Artifact content error");
             alert.setHeaderText("File corrupted");
@@ -82,7 +84,7 @@ public class GameLauncherMainGUIController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         gameManager = new GLGUIGameManager(tabPane);
-        webView.getEngine().load("file:///" + GameLauncherExtractor.$().getMainPresentationIndexFile().getPath());
+        webView.getEngine().load(getClass().getClassLoader().getResource("resources/gui/presentations/main/index.html").toExternalForm());
         getCurrentTab().addListener((observable, oldValue, newValue) -> updateStartButton(newValue));
         updateStartButton(getCurrentTab().getValue());
     }

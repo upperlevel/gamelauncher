@@ -6,7 +6,12 @@
 
     <groupId>xyz.upperlevel.gamelauncher</groupId>
     <artifactId>gamelauncher</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>testgame</module>
+    </modules>
 
     <dependencies>
         <dependency>
