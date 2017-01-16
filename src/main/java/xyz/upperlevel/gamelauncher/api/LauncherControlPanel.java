@@ -144,7 +144,7 @@ public class LauncherControlPanel {
         return this;
     }
 
-    public static LauncherControlPanel g() {
+    public static LauncherControlPanel instance() {
         return $;
     }
 }

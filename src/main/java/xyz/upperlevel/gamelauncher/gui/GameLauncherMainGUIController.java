@@ -65,7 +65,7 @@ public class GameLauncherMainGUIController implements Initializable {
         Optional<Game> game = gameManager.getGame(getCurrentTab().getValue());
         if (game.isPresent()) {
             launcher.getStage().close();
-            LauncherControlPanel.g().detachLooper(game.get()).start();
+            LauncherControlPanel.instance().detachLooper(game.get()).start();
         }
     }
 

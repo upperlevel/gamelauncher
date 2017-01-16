@@ -41,11 +41,11 @@ public class GLGUIGameManager {
     }
 
     public void setup() {
-        LauncherControlPanel.g().getGames().forEach(this::setup);
+        LauncherControlPanel.instance().getGames().forEach(this::setup);
     }
 
     public void load(File file) throws Exception {
-        LauncherControlPanel.g().load(file);
+        LauncherControlPanel.instance().load(file);
         setup();
     }
 

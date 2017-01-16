@@ -15,7 +15,7 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class GameLoader {
+public final class GameLoader {
 
     @SuppressWarnings("unchecked")
     public static Game load(File file) throws Exception {
